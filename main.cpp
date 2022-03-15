@@ -5,8 +5,6 @@
 
 int main()
 {
-    std::cout << "Hello World C++17 gcc" << std::endl;
-
     std::tuple tup {15, 20.6, "tuple_print"};
     using namespace bb::tuple_helper;
     std::cout << tup << "\n";
