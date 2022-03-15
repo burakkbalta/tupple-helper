@@ -13,10 +13,13 @@ int main()
     std::cout << std::boolalpha << val << "\n";
     
     val = isExistInTuple(tup, 20.7);
-    std::cout << std::boolalpha << val << "\n";
+    std::cout << val << "\n";
 
     val = isExistInTuple(tup, "tuple_print");
-    std::cout << std::boolalpha << val << "\n";
+    std::cout << val << "\n";
+
+    val = isExistInTuple(tup, 25);
+    std::cout << val << "\n";
 
     return 0;
 }
