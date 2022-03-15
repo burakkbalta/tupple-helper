@@ -5,14 +5,14 @@
 
 int main()
 {
-    std::tuple tup {15, 20.6, "tuple_print"};
+    std::tuple tup {15, 20.7, "tuple_print"};
     using namespace bb::tuple_helper;
     std::cout << tup << "\n";
 
     auto val = isExistInTuple(tup, 15);
     std::cout << std::boolalpha << val << "\n";
     
-    val = isExistInTuple(tup, 20.6);
+    val = isExistInTuple(tup, 20.7);
     std::cout << std::boolalpha << val << "\n";
 
     val = isExistInTuple(tup, "tuple_print");
