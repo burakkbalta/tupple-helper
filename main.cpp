@@ -18,6 +18,10 @@ int main()
     val = isExistInTuple(tup, "tuple_print");
     std::cout << val << "\n";
 
+    std::string str{"tuple_print"};
+    val = isExistInTuple(tup, str.c_str());
+    std::cout << val << "\n";
+
     val = isExistInTuple(tup, 25.8);
     std::cout << val << "\n";
 

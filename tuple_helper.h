@@ -3,6 +3,7 @@
 
 #include <ostream>
 #include <tuple>
+#include <string.h>
 
 namespace bb {
 namespace tuple_helper{
@@ -30,8 +31,13 @@ template<typename TupleT, typename T, std::size_t... Is>
 bool isExistHelper(const TupleT& tp, T&& elementToBeSearched, std::index_sequence<Is...>) {
     auto isExist = [&elementToBeSearched](const auto& x) {
         if constexpr(std::is_same_v<std::decay_t<decltype(elementToBeSearched)>, std::decay_t<decltype(x)>>) {
-            return x == elementToBeSearched;
-        } else {
+            if constexpr (std::is_arithmetic_v<std::decay_t<T>>) {
+                return x == elementToBeSearched;
+            } else {
+                return strcmp(x, elementToBeSearched) == 0;
+            }    
+        }
+        else {
             return false;
         }
     };
