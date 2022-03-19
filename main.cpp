@@ -18,7 +18,7 @@ int main()
     val = isExistInTuple(tup, "tuple_print");
     std::cout << val << "\n";
 
-    val = isExistInTuple(tup, 25);
+    val = isExistInTuple(tup, 25.8);
     std::cout << val << "\n";
 
     return 0;
